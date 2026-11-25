@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 import { supabase } from '@/lib/supabase';
@@ -131,7 +130,6 @@ export default function Account({ userId, email }: { userId: string; email?: str
           <Text style={styles.buttonText}>{loading ? 'Loading ...' : 'Update'}</Text>
         </TouchableOpacity>
       </View>
-
       <View style={styles.verticallySpaced}>
         <TouchableOpacity style={styles.button} onPress={() => supabase.auth.signOut()}>
           <Text style={styles.buttonText}>Sign Out</Text>
